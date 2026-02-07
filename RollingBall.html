@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rolling Ball Ramp</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scene {
+            width: 600px;
+            height: 400px;
+            position: relative;
+        }
+
+        .track {
+            position: absolute;
+            left: 50px;
+            bottom: 120px;
+            width: 500px;
+            height: 120px;
+            transform: rotate(-20deg);
+            transform-origin: left center;
+        }
+
+        .ramp {
+            width: 500px;
+            height: 10px;
+            background: #777;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .ball {
+            width: 40px;
+            height: 40px;
+            background: orange;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            animation: roll 4s linear infinite;
+        }
+
+        @keyframes roll {
+            from {
+                transform: translateX(460px) rotate(0deg);
+            }
+
+            to {
+                transform: translateX(0) rotate(720deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+        <div class="track">
+            <div class="ramp"></div>
+            <div class="ball"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

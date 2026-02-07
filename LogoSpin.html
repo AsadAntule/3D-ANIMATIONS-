@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Logo Spin</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+        }
+
+        .scene {
+            perspective: 800px;
+        }
+
+        .logo {
+            font-size: 80px;
+            font-weight: bold;
+            color: cyan;
+            text-shadow: 0 0 15px cyan;
+            transform-style: preserve-3d;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+        <div class="logo">SAMSUNG</div>
+    </div>
+
+</body>
+
+</html>

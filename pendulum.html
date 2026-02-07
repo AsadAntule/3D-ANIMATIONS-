@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pendulum</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #222;
+        }
+
+        .pendulum-wrapper {
+            position: relative;
+            transform-origin: top center;
+            animation: swing 2s ease-in-out infinite alternate;
+        }
+
+
+        .pendulum {
+            width: 15px;
+            height: 220px;
+            background: #4CAF50;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+
+        .pendulum-ball {
+            width: 40px;
+            height: 40px;
+            background: brown;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        @keyframes swing {
+            from {
+                transform: rotate(-25deg);
+            }
+
+            to {
+                transform: rotate(25deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pendulum-wrapper">
+        <div class="pendulum"></div>
+        <div class="pendulum-ball"></div>
+    </div>
+
+</body>
+
+</html>

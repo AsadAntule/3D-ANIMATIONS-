@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Text Pop Up</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scene {
+            perspective: 800px;
+        }
+
+        .text {
+            font-size: 90px;
+            font-weight: bold;
+            color: #00ffff;
+            opacity: 0;
+            transform: scale(0.2) translateZ(-200px);
+            animation: pop 3s ease-out forwards infinite;
+        }
+
+        @keyframes pop {
+            to {
+                opacity: 1;
+                transform: scale(1) translateZ(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+        <div class="text">HELLO WORLD</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Robot Walk</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        .robot {
+            position: relative;
+            width: 140px;
+            height: 260px;
+        }
+
+        .head {
+            width: 70px;
+            height: 60px;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 35px;
+        }
+
+        .neck {
+            width: 20px;
+            height: 10px;
+            background: white;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+
+        .body {
+            width: 100px;
+            height: 110px;
+            background: white;
+            position: absolute;
+            top: 70px;
+            left: 20px;
+        }
+
+        .arm {
+            width: 20px;
+            height: 90px;
+            background: white;
+            position: absolute;
+            top: 75px;
+            transform-origin: top center;
+        }
+
+        .left-arm {
+            left: 0;
+            animation: armMove 1s infinite alternate;
+        }
+
+        .right-arm {
+            right: 0;
+            animation: armMove 1s infinite alternate-reverse;
+        }
+
+        .leg {
+            width: 25px;
+            height: 95px;
+            background: white;
+            position: absolute;
+            top: 180px;
+            transform-origin: top center;
+        }
+
+        .left-leg {
+            left: 40px;
+            animation: legMove 1s infinite alternate-reverse;
+        }
+
+        .right-leg {
+            right: 40px;
+            animation: legMove 1s infinite alternate;
+        }
+
+        @keyframes armMove {
+            from {
+                transform: rotate(20deg);
+            }
+
+            to {
+                transform: rotate(-20deg);
+            }
+        }
+
+        @keyframes legMove {
+            from {
+                transform: rotate(-20deg);
+            }
+
+            to {
+                transform: rotate(20deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="robot">
+        <div class="head"></div>
+        <div class="neck"></div>
+        <div class="body"></div>
+
+        <div class="arm left-arm"></div>
+        <div class="arm right-arm"></div>
+
+        <div class="leg left-leg"></div>
+        <div class="leg right-leg"></div>
+    </div>
+
+</body>
+
+</html>

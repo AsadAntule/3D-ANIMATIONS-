@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fly Camera</title>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+        .scene {
+            width: 100vw;
+            height: 100vh;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .world {
+            position: relative;
+            transform-style: preserve-3d;
+            animation: fly 15s linear infinite;
+        }
+
+        .box {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: cyan;
+            opacity: 0.8;
+        }
+
+        .box1 {
+            transform: translateZ(-200px);
+        }
+
+        .box2 {
+            transform: translateZ(-600px) translateX(200px);
+        }
+
+        .box3 {
+            transform: translateZ(-1000px) translateX(-200px);
+        }
+
+        .box4 {
+            transform: translateZ(-1400px);
+        }
+
+        @keyframes fly {
+            from {
+                transform: translateZ(0);
+            }
+
+            to {
+                transform: translateZ(1400px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+        <div class="world">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

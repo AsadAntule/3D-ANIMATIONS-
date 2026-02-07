@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domino Fall</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            position: relative;
+        }
+
+        .floor {
+            position: absolute;
+            top: 90px;
+            left: -40px;
+            width: calc(100% + 80px);
+            height: 4px;
+            background: #666;
+        }
+
+        .scene {
+            display: flex;
+            gap: 18px;
+        }
+
+        .domino {
+            width: 24px;
+            height: 90px;
+            background: cyan;
+            transform-origin: bottom center;
+            animation: fall 1s ease-out forwards;
+        }
+
+        .domino:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .domino:nth-child(2) {
+            animation-delay: .3s;
+        }
+
+        .domino:nth-child(3) {
+            animation-delay: .6s;
+        }
+
+        .domino:nth-child(4) {
+            animation-delay: .9s;
+        }
+
+        .domino:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes fall {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(80deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="scene">
+            <div class="domino"></div>
+            <div class="domino"></div>
+            <div class="domino"></div>
+            <div class="domino"></div>
+            <div class="domino"></div>
+        </div>
+        <div class="floor"></div>
+    </div>
+
+</body>
+
+</html>
